@@ -18,7 +18,7 @@ American English (en-US).
 
 **plant:** string; an identification code used to specify an individual plant across different data files. 40 plants are sampled in a typical week, so in most cases a code designation is assigned between #1 - #40. Plants #1 - #20 represent the flower count sample, these code designations are fixed to the same individuals each week. Plants #21 - #40 represent the petal collection samples, these code designations are reassigned to a random sample of plants each week. The code designations match with the sample ID in the porometer dataset, and they will be used to append these data frames together at a future point. Less then 40 plants were sampled in weeks 1 through 3, therefore the code designations are irregular in these cases.
 
-**p_freshMass:** integer; petal fresh mass in milligrams (mg). This is the mass of the flower petal collected from a given plant measured in the lab upon return from the field site. Petals were stored in plastic ziplock bags alongside a damp paper towel and transported in an icebox before measurement.
+**p_freshMass:** integer; petal fresh mass in milligrams (mg). This is the mass of the flower petal measured in the lab upon return from the field site. Petals were stored in plastic ziplock bags alongside a damp paper towel and transported in an icebox before measurement.
 
 **p_surfaceArea:** integar; petal surface area in centimeters (cm). Petals were scanned in a photocopy machine and measured with ImageJ.
 
