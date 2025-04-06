@@ -1,6 +1,6 @@
 ## Dataset Summary 
 
-The petal dataset is the product of a research project investigating flower physiology in _Eschscholzia californica_ at Mount Diablo State Park. Each row in the dataset corresponds to a petal collected from an indiviudal plant. This project is a work in progress, as I am currently in the process of collecting more data.
+The petal dataset is the product of a research project investigating flower physiology in _Eschscholzia californica_ at Mount Diablo State Park. Each row in the dataset corresponds to a petal collected from an indiviudal plant in the field. This project is a work in progress, as I am currently in the process of collecting more data.
 
 ## Languages 
 
