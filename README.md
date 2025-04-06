@@ -1,2 +1,2 @@
 # eschscholzia-flowers
-A research project investigating flower physiology in Eschscholzia californica at Mount Diablo State Park.
+A research project investigating flower physiology in _Eschscholzia californica_ at Mount Diablo State Park.
