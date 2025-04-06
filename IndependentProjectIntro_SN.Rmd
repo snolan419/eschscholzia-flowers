@@ -1,0 +1,50 @@
+---
+title: "Independent Project Introduction"
+subtitle: "Phenotypic plasticity in *Eschscholzia californica* flowers"
+author: "Shea Nolan"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Introduction
+
+Flowering plants are vital to terrestrial ecosystems and human agriculture, making their responses to climate change a critical area of study. Flowers are essential for reproduction and influence population viability and fruit or seed yield. However, their physiological constraints remain understudied (Gleason, 2018). Research suggests flowers maintain their shape using a hydrostatic skeleton, which reduces carbon investment but relies on a positive water balance (Roddy et al., 2019). Despite requiring less carbon than leaves, flowers can lose significant water during drought due to petal surface conductance, potentially affecting floral display under stress (Roddy et al., 2023).
+
+Phenotypic plasticity, the ability to express different phenotypes from a single genotype, helps plants adapt to environmental variability. This trait is critical in assessing plant resilience to climate change, particularly in species facing geographic or seasonal climate shifts (Matesanz et al., 2010; Valladares et al., 2014). *Eschscholzia californica*, the California golden poppy, has a long bloom period in a Mediterranean climate, spanning cool, wet winters and hot, dry summers. Herbarium data suggests *E. californica* flowering onset shifts with warming mean annual temperatures, and that drought induces maladaptive plasticity in reproductive fitness (Pearson et al., 2021; Ryan & Cleland, 2021). **Hypothesis:** I hypothesize that *E. californica* flowers exhibit plasticity in water-use traits to sustain floral displays across variable conditions.
+
+### Aim 1
+
+Does the (1) **number of flowers** on individual *E. californica* plants vary with time? (2) Does this variance correlate with shifts in temperature and soil water availability in a single season at Mount Diablo State Park?
+
+### Aim 2
+
+Does (3) **petal size** and (4) **petal water content** in *E. californica* plants vary with time? (5, 6) Does this variance correlate with shifts in temperature and soil water availability in a single season at Mount Diablo State Park? **For the scope of my BIOL 710 project, I will focus on analyzing variance in petal size.**
+
+### Aim 3
+
+Does (7) **petal surface conductance** in *E. californica* plants vary with time? (8) Does this variance correlate with shifts in temperature and soil water availability in a single season at Mount Diablo State Park?
+
+```{r}
+# load data
+petal <- read.csv("petal.csv") 
+```
+
+## Literature cited
+
+Gleason, S. M. (2018). A blooming interest in the hydraulic traits of flowers. *Plant, Cell & Environment, 41*(10), 2247–2249. https://doi.org/10.1111/pce.13345
+
+Matesanz, S., Gianoli, E., & Valladares, F. (2010). Global change and the evolution of phenotypic plasticity in plants. *Annals of the New York Academy of Sciences, 1206*(1), 35–55. https://doi.org/10.1111/j.1749-6632.2010.05704.x
+
+Pearson, K. D., Love, N. L. R., Ramirez-Parada, T., Mazer, S. J., & Yost, J. M. (2021). Phenological trends in the California poppy (*Eschscholzia californica*): digitized herbarium specimens reveal intraspecific variation in the sensitivity of flowering date to climate change. *Madroño, 68*(4). https://doi.org/10.3120/0024-9637-68.4.343
+
+Roddy, A. B., Guilliams, C. M., Fine, P. V. A., Mambelli, S., Dawson, T. E., & Simonin, K. A. (2023). Flowers are leakier than leaves but cheaper to build. *New Phytologist, 239*(6), 2076–2082. https://doi.org/10.1111/nph.19104
+
+Roddy, A. B., Jiang, G., Cao, K., Simonin, K. A., & Brodersen, C. R. (2019). Hydraulic traits are more diverse in flowers than in leaves. *New Phytologist, 223*(1), 193–203. https://doi.org/10.1111/nph.15749
+
+Ryan, E. M., & Cleland, E. E. (2021). Clinal variation in phenological traits and fitness responses to drought across the native range of California poppy. *Climate Change Ecology, 2*, 100021. https://doi.org/10.1016/j.ecochg.2021.100021
+
+Valladares, F., Matesanz, S., Guilhaumon, F., Araújo, M. B., Balaguer, L., Benito-Garzón, M., Cornwell, W., Gianoli, E., van Kleunen, M., Naya, D. E., Nicotra, A. B., Poorter, H., & Zavala, M. A. (2014). The effects of phenotypic plasticity and local adaptation on forecasts of species range shifts under climate change. *Ecology Letters, 17*(11), 1351–1364. https://doi.org/10.1111/ele.12348
+
+
