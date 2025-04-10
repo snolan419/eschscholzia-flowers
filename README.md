@@ -34,14 +34,14 @@ American English (en-US).
 
 ### porometer.csv
 
-**Time** string; a time stamp in Pacific Standard Time. Used in data quality control for the porometer measurements.
+**Time:** string; a time stamp in Pacific Standard Time. Used in data quality control for the porometer measurements.
 
-**Sample** a sequential integer designation for the plant sampled with the porometer. Similar to the plant identification code, however it represents the number of plants sampled in a given week.
+**Sample:** a sequential integer designation for the plant sampled with the porometer. Similar to the plant identification code, however it represents the number of plants sampled in a given week.
 
-**Petal side** string; indicates whether the porometer measurement represents the bottom (abraxial) petal surface or top (adaxial) petal surface.
+**Petal side:** string; indicates whether the porometer measurement represents the bottom (abraxial) petal surface or top (adaxial) petal surface.
 
-**gsw** float; surface conductance in moles per meter squared per second (mol m<sup>-2</sup> s<sup>-1</sup>)
+**gsw:** float; surface conductance in moles per meter squared per second (mol m<sup>-2</sup> s<sup>-1</sup>)
 
-**leak_pct** float; a measurement of leakage in the porometer gasket. Used in data quality control for the porometer measurements.
+**leak_pct:** float; a measurement of leakage in the porometer gasket. Used in data quality control for the porometer measurements.
 
-
+For descriptions of the other data columns, see petal.csv.
