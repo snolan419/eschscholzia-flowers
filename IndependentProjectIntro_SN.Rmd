@@ -27,8 +27,36 @@ Does (3) **petal size** and (4) **petal water content** in *E. californica* plan
 Does (7) **petal surface conductance** in *E. californica* plants vary with time? (8) Does this variance correlate with shifts in temperature and soil water availability in a single season at Mount Diablo State Park?
 
 ```{r}
+library(tidyverse)
+
 # load data
-petal <- read.csv("petal.csv") 
+petal = read.csv("petal.csv")
+porometer = read.csv('porometer/porometer.csv')
+
+# filter porometer by petal side
+gsw_ab = filter(porometer,Petal.side=="bottom")
+gsw_ad = filter(porometer,Petal.side=="top")
+
+# porometer histogram
+p1 = ggplot(porometer,aes(x=gsw)) + 
+  geom_histogram(binwidth = 0.005) +
+  xlab("gsw") +
+  ylab("count")
+p1
+
+# gsw abraxial histogram
+p2 = ggplot(gsw_ab,aes(x=gsw)) + 
+  geom_histogram(binwidth = 0.005) +
+  xlab("gsw abraxial") +
+  ylab("count")
+p2
+
+# gsw adaxial histrogram
+p3 = ggplot(gsw_ad,aes(x=gsw)) + 
+  geom_histogram(binwidth = 0.005) +
+  xlab("gsw adaxial") +
+  ylab("count")
+p3
 ```
 
 ## Literature cited
