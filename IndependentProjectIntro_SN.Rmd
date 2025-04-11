@@ -31,7 +31,7 @@ library(tidyverse)
 
 # load data
 petal = read.csv("petal.csv")
-porometer = read.csv('porometer/porometer.csv')
+porometer = read.csv('porometer.csv')
 
 # filtering out noise
 porometer = filter(porometer,gsw<0.04)
