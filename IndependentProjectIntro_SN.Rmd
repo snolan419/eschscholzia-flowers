@@ -31,11 +31,30 @@ library(tidyverse)
 
 # load data
 petal = read.csv("petal.csv")
-porometer = read.csv('porometer.csv')
+porometer = read.csv('porometer/porometer.csv')
+
+# filtering out noise
+porometer = filter(porometer,gsw<0.04)
+
+# initializing an empty data frame
+porometer_noLoners <- data.frame(matrix(ncol = 8, nrow = 0))
+colnames(porometer_noLoners) <- c('Time', 'Date', 'Sample', 'Study.plot', 'Petal.side','gsw','leak_pct','plant')
+
+# filtering out the loners
+for (i in (seq_len(nrow(porometer) - 1))) {
+  j = i + 1
+  current_element = porometer[i,8]
+  next_element = porometer[j,8]
+  boolean = current_element == next_element
+  if (boolean) {
+    porometer_noLoners[nrow(porometer_noLoners) + 1,] = porometer[i,c(1:8)]
+    porometer_noLoners[nrow(porometer_noLoners) + 1,] = porometer[j,c(1:8)]
+  }
+}
 
 # filter porometer by petal side
-gsw_ab = filter(porometer,Petal.side=="bottom")
-gsw_ad = filter(porometer,Petal.side=="top")
+gsw_ab = filter(porometer_noLoners,Petal.side=="bottom")
+gsw_ad = filter(porometer_noLoners,Petal.side=="top")
 
 # porometer histogram
 p1 = ggplot(porometer,aes(x=gsw)) + 
@@ -57,6 +76,9 @@ p3 = ggplot(gsw_ad,aes(x=gsw)) +
   xlab("gsw adaxial") +
   ylab("count")
 p3
+
+# paired t test
+t.test(gsw_ab$gsw, gsw_ad$gsw, paired=TRUE)
 ```
 
 ## Literature cited
