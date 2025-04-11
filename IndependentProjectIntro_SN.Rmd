@@ -31,7 +31,7 @@ library(tidyverse)
 
 # load data
 petal = read.csv("petal.csv")
-porometer = read.csv('porometer/porometer.csv')
+porometer = read.csv('porometer.csv')
 
 # filter porometer by petal side
 gsw_ab = filter(porometer,Petal.side=="bottom")
