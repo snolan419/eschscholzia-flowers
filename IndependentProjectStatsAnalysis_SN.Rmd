@@ -20,7 +20,7 @@ library(rstatix)
 library(car)
 
 # load data
-petal = read.csv("petal.csv")
+petal = read.csv("data/petal.csv")
 petal$date = as.Date(petal$date, "%m/%d/%Y")
 str(petal)
 ```
